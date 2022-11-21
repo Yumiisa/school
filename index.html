@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html tables</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+        .tab, .head, .cell{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-transform: capitalize;
+        }
+        .head{
+            height: 40px;
+            text-transform: uppercase;
+        }
+        .tab{
+            width: 30%;
+            height: 70px;
+            text-align: center;
+            margin: auto;
+        }
+        br{
+           
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+        .tb,.header{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-transform: capitalize;
+          align-items:baseline;
+        }
+        .tb{
+            width: 40%;
+            margin: 10px auto;
+            height: 100px;
+        } 
+        .a{
+            text-transform: uppercase;
+            align-items: center;
+        }
+        .container{
+           height: 70%;
+           margin-top: 20px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        
+           
+        } 
+        .form{
+           flex: 1;
+           background-color:#35D3C6; 
+           max-width: 600px;
+         
+           border: 1px solid #4494DA ;
+           border-radius: 10px;
+           margin-top: auto;
+           margin-bottom:auto;
+
+        }   
+       .form-header {
+        padding: 15px 0;
+        border-bottom: 1px solid #4494DA;
+       } 
+        .form-header h2{
+            font-size: 28px;
+            text-align: center;
+            color:#E6F4F1
+        } 
+        .sign{
+            display: flex;
+            flex-direction: row;
+        } 
+       .input{
+      
+          display: flex;
+            flex:1;  
+          flex-direction: column;
+          margin: 10px 5px;
+       }
+       label {
+    color:#4494DA;
+    font-size:17px;
+    font-weight:800;
+}
+input[type="text"],  select{
+  font-size: 18px;
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #4494DA;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  background: white;
+  outline: none;
+}
+.form-body {
+    background:white;
+    padding:5px 10px;
+}
+.radio-group{
+    display: flex;
+}
+.radio-group div{
+    flex: 1;
+}
+.radio-group label{
+    cursor: pointer;
+    color: #4494DA;
+}
+.btn {
+    padding:10px 20px;
+    background-color: #1BBA93;
+    font-size:17px;
+    border:none;
+    border-radius:5px;
+    color:#1BBA93;
+    cursor:pointer;
+    
+}
+a{
+    font-size: 18px;
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #4494DA;
+  text-transform: capitalize;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+
+  background: white;
+  text-decoration: none;
+  outline: none;
+}
+::placeholder{
+    color: #1BBA93;
+    font-size: 18px;
+}
+
+    </style>
+</head>
+<body>
+    <table class="tab">
+       <tr> <th rowspan="3" class=head>
+            status
+        </th >
+           
+            <th colspan="2" class=head>
+                gender
+               
+            </th>
+
+      
+        
+        </tr>
+        <tr><td class="cell">female </td>
+        <td class="cell">male </td>
+       
+    </tr>
+    <tr>
+      
+
+        <td class="cell">number </td>
+        <td class="cell">number </td>
+        <th class=head>
+            total
+        </th>
+    </tr>
+       
+        <tr>
+            <td class="cell">educated</td>
+            <td class="cell">1250</td>
+            <td class="cell">450</td>
+            <td class="cell">2050</td>
+        </tr>
+        
+        <tr>
+            <td class="cell">Not educated</td>
+            <td class="cell">1600</td>
+            <td class="cell">200</td>
+            <td class="cell">1450</td>
+        </tr>
+        <tr>
+            <td class="cell">Total</td>
+            <td class="cell">2850</td>
+            <td class="cell">650</td>
+            <td class="cell">3500</td>
+        </tr>
+    </table>
+    <table class="tb">
+        <tr>
+            <th  class="header"></th>
+            <th  class="header" ></th>
+            <th  colspan="6" class="header">exports ("000")</th>
+        </tr>
+        <tr>
+            <th  class="header"></th>
+            <th class="header"></th> 
+        <th colspan="2" class="header a">regions</th>
+    <th class="header"></th></tr>
+    <tr>
+        <th  class="header"></th>
+        <th  class="header"></th>
+        <th class="header a">province y</th>
+        <th class="header a">province z</th>
+        <th colspan="3" class="header">total</th>
+    </tr>
+     <tr>
+        <th  rowspan="2" class="header a">Area A</th>
+        <th class="header">Cattle</th>
+        <th class="header">400</th>
+        <th class="header">350</th>
+        <th class="header">1450</th>
+        
+    </tr> 
+    <tr>
+        <th class="header">camels</th>
+        <th class="header">400</th>
+        <th class="header">350</th>
+        <th class="header">1450</th>
+    </tr>
+    <tr>
+        <th rowspan="2" class="header a">Area B</th>
+        <th class="header">Cattle</th>
+        <th class="header">850</th>
+        <th class="header">1050</th>
+        <th class="header">1900</th>
+    
+    </tr><tr>
+        <th class="header">camels</th>
+        <th class="header">250</th>
+        <th class="header">550</th>
+        <th class="header">800</th>
+    </tr>
+    
+  
+    </table>
+    <section class="container">
+        
+      <form class="form ">
+        <div class="form-header"><h2>Option registration</h2></div>
+        <div class="sign">
+            <div class="form-body">
+            <div class="input">
+                <label for="name">name</label>
+                <input type="text" id="name" placeholder="enter name" />
+            </div>
+        
+        <div class="input">
+            <label for="registration">registration</label>
+        <input type="text" id="registration" placeholder="enter registration number" /></div>
+           
+                <div class="input">
+                    <label for="">Please select course
+                        <select name="course" id="course">
+                
+                            <option value="computer science">computer science</option>
+                            <option value="UX">UX design</option>
+                            <option value="UI">UI design</option>
+                            <option value="data">data science</option>
+                
+                        </select>
+                    </label>
+                </div>
+                
+                <div class="input">
+                    <a href="me.html" >click to check the school</a>
+                
+                </div>
+                <div class="input"><a href="course.html">clikc to  check our courses</a></div>
+                
+                <div class="btn"><input type="submit"></div>
+            </div>
+    <div class="radio-group">
+        <div><label for="female">female</label>
+            <input type="radio" id="female" name="gender" value="gender">
+        </div>
+        <div >
+            <label for="male">male</label>
+            <input type="radio" id="male" name="gender" value="gender">
+        </div>
+    </div>
+            
+    </div>
+            
+     </form>
+
+    </section>
+
+    
+</body>
+</html>
